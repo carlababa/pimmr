@@ -40,8 +40,12 @@ class AppComponent extends React.Component {
   render() {
     return (
       <div>
-        <h2>Restaurants</h2>
-        <Restaurants restaurants={this.state.restaurants} />
+        <div>
+          <h2>Restaurants</h2>
+        </div>
+        <div>
+          <Restaurants restaurants={this.state.restaurants} />
+        </div>
       </div>
     );
   }

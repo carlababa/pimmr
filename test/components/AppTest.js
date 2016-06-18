@@ -24,7 +24,7 @@ describe('<App />', () => {
 
   afterEach(() => xhr.restore());
 
-  describe.only('when rendering the component', () => {
+  describe('when rendering the component', () => {
     it('should render the <Restaurants /> component', () => {
       expect(component.find(Restaurants)).to.have.length(1);
     });
