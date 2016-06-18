@@ -68,6 +68,7 @@
     "webpack-dev-server": "^2.0.0-beta"
   },
   "dependencies": {
+    "jquery": "^3.0.0",
     "react": "^15.0.1",
     "react-dom": "^15.0.1"
   }
