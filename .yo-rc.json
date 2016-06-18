@@ -1,0 +1,9 @@
+{
+  "generator-react-webpack": {
+    "appName": "pimmr",
+    "style": "css",
+    "cssmodules": true,
+    "postcss": false,
+    "generatedWithVersion": 4
+  }
+}
