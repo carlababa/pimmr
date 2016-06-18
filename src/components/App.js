@@ -1,5 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
+import Restaurants from './Restaurants';
 import cssmodules from 'react-css-modules';
 import styles from './app.cssmodule.css';
 
@@ -40,13 +41,7 @@ class AppComponent extends React.Component {
     return (
       <div>
         <h2>Restaurants</h2>
-        <ul>
-          {this.state.restaurants.map((restaurant) => (
-            <li>
-              <p>{restaurant.name}</p>
-            </li>
-          ))}
-        </ul>
+        <Restaurants restaurants={this.state.restaurants} />
       </div>
     );
   }
