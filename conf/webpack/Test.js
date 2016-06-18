@@ -17,6 +17,9 @@ class WebpackTestConfig extends WebpackBaseConfig {
         'react/lib/ReactContext': true,
       },
       module: {
+        noParse: [
+          /\/sinon\.js/,
+        ],
         preLoaders: [
           {
             test: /\.(js|jsx)$/,

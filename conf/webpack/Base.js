@@ -158,7 +158,8 @@ class WebpackBaseConfig {
           images: `${this.srcPathAbsolute}/images/`,
           sources: `${this.srcPathAbsolute}/sources/`,
           stores: `${this.srcPathAbsolute}/stores/`,
-          styles: `${this.srcPathAbsolute}/styles/`
+          styles: `${this.srcPathAbsolute}/styles/`,
+          sinon: 'sinon/pkg/sinon.js'
         },
         extensions: ['', '.js', '.jsx'],
         modules: [
