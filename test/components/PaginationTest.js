@@ -5,9 +5,11 @@ import Pagination from 'components//Pagination.js';
 
 describe('<Pagination />', () => {
   let component;
+  let spy;
 
   beforeEach(() => {
-    component = mount(<Pagination />);
+    spy = sinon.spy();
+    component = mount(<Pagination updateList={spy} />);
   });
 
   describe('when rendering the component', () => {
@@ -30,12 +32,6 @@ describe('<Pagination />', () => {
   });
 
   describe('when clicking the buttons', () => {
-    let spy;
-    beforeEach(() => {
-      spy = sinon.spy();
-      component.setProps({ updateList: spy });
-    });
-
     describe('when clicking next button', () => {
       it('should set the start to +5 and call updateList once', () => {
         component.find('#nextPage').simulate('click');

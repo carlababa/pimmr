@@ -41,15 +41,15 @@ describe('<App />', () => {
         method: 'restaurant.getHighestRated',
         params: ['Amsterdam', 0, 5],
       });
+    });
 
-      it('should set restaurants on state', (done) => {
-        const restaurantsJson = '{"result": [{"name": "testing"}]}';
-        requests[0].respond(200, { 'Content-Type': 'application/json' }, restaurantsJson);
+    it('should set restaurants on state', (done) => {
+      const restaurantsJson = '{"result": [{"name": "testing"}]}';
+      requests[0].respond(200, { 'Content-Type': 'application/json' }, restaurantsJson);
 
-        setTimeout(() => {
-          expect(component.state('restaurants')).to.deep.equal([{ name: 'testing' }]);
-          done();
-        });
+      setTimeout(() => {
+        expect(component.state('restaurants')).to.deep.equal([{ name: 'testing' }]);
+        done();
       });
     });
   });
