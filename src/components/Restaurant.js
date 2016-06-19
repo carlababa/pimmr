@@ -8,6 +8,14 @@ class Restaurant extends React.Component {
     restaurant: React.PropTypes.object.isRequired
   }
 
+  makeBold(name) {
+    const splitedName = name.split(/restaurant/i);
+    if (splitedName.length > 1) {
+      return <span>{splitedName[0]} <b>Restaurant</b> {splitedName[1]}</span>;
+    }
+    return <span>{name}</span>;
+  }
+
   render() {
     return (
       <li>
@@ -15,7 +23,7 @@ class Restaurant extends React.Component {
           <img alt="restaurant-name" src={this.props.restaurant.photos[0].s3URL} />
         </div>
         <div>
-          {this.props.restaurant.name}
+          {this.makeBold(this.props.restaurant.name)}
         </div>
         <div>
           {this.props.restaurant.cuisines.map((cuisine) => cuisine)}
