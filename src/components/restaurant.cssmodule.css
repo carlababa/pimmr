@@ -15,5 +15,9 @@ ul>li:nth-child(even) {
 }
 
 .restaurantImage {
-  
+
+}
+
+img {
+  max-width: 200px;
 }

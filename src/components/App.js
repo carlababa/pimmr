@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import Restaurants from './Restaurants';
+import Pagination from './Pagination';
 import cssmodules from 'react-css-modules';
 import styles from './app.cssmodule.css';
 
@@ -13,6 +14,7 @@ class AppComponent extends React.Component {
       restaurants: []
     };
 
+    this.getRestaurants = this.getRestaurants.bind(this);
     this.getRestaurants(0);
   }
 
@@ -46,6 +48,7 @@ class AppComponent extends React.Component {
         <div>
           <Restaurants restaurants={this.state.restaurants} />
         </div>
+        <Pagination updateList={this.getRestaurants} />
       </div>
     );
   }
