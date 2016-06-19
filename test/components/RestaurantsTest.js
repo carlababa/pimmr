@@ -21,12 +21,12 @@ describe('<Restaurants />', () => {
     component = shallow(<Restaurants restaurants={restaurants} />);
   });
 
-  describe.only('when rendering the component', () => {
+  describe('when rendering the component', () => {
     it('should have a <ul>', () => {
       expect(component.find('ul')).to.have.length(1);
     });
 
-    it('shoul render two <Restaurant /> components', () => {
+    it('should render two <Restaurant /> components', () => {
       expect(component.find(Restaurant)).to.have.length(2);
     });
   });
