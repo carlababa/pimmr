@@ -2,22 +2,36 @@ ul>li:nth-child(even) {
   color: #FF4000;
 }
 
-.restaurantName {
+.card {
+  min-height: 315px;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.35);
+  margin: 10px;
+  width: 300px;
+}
 
+.restaurantName {
+  font-size: 18px;
 }
 
 .city {
-
+  color: #2F4858;
+  background-color: #E3E5E8;
+  margin-top: 12px;
+  padding: 8px 10px;
+  text-align: right;
+  font-size: 14px;
 }
 
 .cuisines {
+  font-style: italic;
+  color: #BBBCBF;
+}
 
+.cuisines>span {
+  margin-right: 8px;
 }
 
 .restaurantImage {
-
-}
-
-img {
-  max-width: 200px;
+  height: 220px;
+  width: 300px;
 }

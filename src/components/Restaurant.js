@@ -19,17 +19,23 @@ class Restaurant extends React.Component {
   render() {
     return (
       <li>
-        <div className={styles.restaurantImage}>
-          <img alt="restaurant-name" src={this.props.restaurant.photos[0].s3URL} />
-        </div>
-        <div className={styles.restaurantName}>
-          {this.makeBold(this.props.restaurant.name)}
-        </div>
-        <div className={styles.cuisines}>
-          {this.props.restaurant.cuisines.map((cuisine) => cuisine)}
-        </div>
-        <div className={styles.city}>
-          {this.props.restaurant.address.city}
+        <div className={styles.card}>
+          <div>
+            <img
+              className={styles.restaurantImage}
+              alt="restaurant-name"
+              src={this.props.restaurant.photos[0].s3URL}
+            />
+          </div>
+          <div className={styles.restaurantName}>
+            {this.makeBold(this.props.restaurant.name)}
+          </div>
+          <div className={styles.cuisines}>
+            {this.props.restaurant.cuisines.map((cuisine) => <span>{cuisine}</span>)}
+          </div>
+          <div className={styles.city}>
+            {this.props.restaurant.address.city}
+          </div>
         </div>
       </li>
     );

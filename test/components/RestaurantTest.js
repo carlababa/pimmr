@@ -22,8 +22,8 @@ describe('<Restaurant />', () => {
       expect(component.find('li')).to.have.length(1);
     });
 
-    it('should render a restaurant image', () => {
-      expect(component.find('img')).to.have.length(1);
+    it('should render <img> with className restaurantImage and the restaurant image', () => {
+      expect(component.find(`img.${styles.restaurantImage}`)).to.have.length(1);
       expect(component.find('img').props().src).to.equal('photo1.jpg');
     });
 
