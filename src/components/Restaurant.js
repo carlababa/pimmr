@@ -31,7 +31,7 @@ class Restaurant extends React.Component {
             {this.makeBold(this.props.restaurant.name)}
           </div>
           <div className={styles.cuisines}>
-            {this.props.restaurant.cuisines.map((cuisine) => <span>{cuisine}</span>)}
+            {this.props.restaurant.cuisines.map((cuisine) => <span key={cuisine}>{cuisine}</span>)}
           </div>
           <div className={styles.city}>
             {this.props.restaurant.address.city}
