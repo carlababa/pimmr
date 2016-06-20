@@ -1,9 +1,10 @@
+'use strict';
+
 /* eslint no-console: "off" */
 const webpackConfigs = require('./conf/webpack');
 const defaultConfig = 'dev';
 
 module.exports = (configName) => {
-
   // If there was no configuration give, assume default
   const requestedConfig = configName || defaultConfig;
 
