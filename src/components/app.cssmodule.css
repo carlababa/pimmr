@@ -1,0 +1,16 @@
+:global * {
+  box-sizing: border-box;
+}
+
+:global body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  margin: 0 4% 0 auto;
+}
+
+.navbar {
+  color: #2F4858;
+  text-align: left;
+  margin-left: 5%;
+}

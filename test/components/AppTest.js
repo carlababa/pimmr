@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 import App from 'components/App';
 import Restaurants from 'components/Restaurants';
 import sinon from 'sinon';
+import styles from 'components/app.cssmodule.css';
 
 describe('<App />', () => {
   let component;
@@ -29,8 +30,8 @@ describe('<App />', () => {
       expect(component.find(Restaurants)).to.have.length(1);
     });
 
-    it('should render a <h2>', () => {
-      expect(component.containsMatchingElement(<h2>Restaurants</h2>)).to.equal(true);
+    it('should render a <div> with className navbar and a <h2>Restaurants</h2>', () => {
+      expect(component.find(`div.${styles.navbar} h2`).text()).to.equal('Restaurants');
     });
 
     it('should get the first 5 restaurants', () => {

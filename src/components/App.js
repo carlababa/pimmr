@@ -42,7 +42,7 @@ class AppComponent extends React.Component {
   render() {
     return (
       <div>
-        <div>
+        <div className={styles.navbar}>
           <h2>Restaurants</h2>
         </div>
         <div>
