@@ -30,7 +30,7 @@ class Pagination extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.paginationWrapper}>
         {this.state.start > 0 &&
           <button id="backPage" onClick={this.backPage}>Back</button>}
         <button id="nextPage" onClick={this.nextPage}>Next</button>

@@ -1,3 +1,29 @@
-.pagination-component {
-  border: 1px dashed #f00;
+.paginationWrapper {
+  margin-left: 32px;
+}
+
+button {
+  border: 2px solid lightgray;
+  background-color: #2F4858;
+  color: #fff;
+  padding: 9px 12px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 4px;
+}
+
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+button:hover {
+  background-color: #4D7791;
+}
+
+button:focus {
+  box-shadow: 0 0 4px rgba(81, 203, 238, 1);
+  padding: 9px 12px;
+  margin: 4px;
+  border: 1px solid rgba(81, 203, 238, 1);
 }

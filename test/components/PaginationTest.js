@@ -13,20 +13,20 @@ describe('<Pagination />', () => {
   });
 
   describe('when rendering the component', () => {
-    it('should render the button next page ', () => {
-      expect(component.containsMatchingElement(<button>Next</button>)).to.equal(true);
+    it('should render the button with id nextPage ', () => {
+      expect(component.find('#nextPage')).to.have.length(1);
     });
 
     describe('when start is equal to 0', () => {
-      it('should not render the back page', () => {
-        expect(component.containsMatchingElement(<button>Back</button>)).to.equal(false);
+      it('should not render the button with id backPage', () => {
+        expect(component.find('#backPage')).to.have.length(0);
       });
     });
 
     describe('when start is greater than 0', () => {
       it('should render the back button', () => {
         component.setState({ start: 5 });
-        expect(component.containsMatchingElement(<button>Back</button>)).to.equal(true);
+        expect(component.find('#backPage')).to.have.length(1);
       });
     });
   });
